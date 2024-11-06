@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Protest+Revolution&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>point and click game</title>
+</head>
+
+<body>
+    <div id="title">
+        <h1 id="mainTitle">Point an Click Adventure</h1>
+    </div>
+
+    <div id="gameWindow">
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <div id="mainCharacterAvatar" class="foreground">
+                    <img src="assets/imgmine/mcportrait.png" id="mcportrait" alt="The main character avatar">
+                </div>
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterAvatar" class="foreground">
+                    <img src="assets/imgmine/watchtower.png" id="portairStatue" alt="counterAvatar">
+                </div>
+
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <div id="brownBar"></div>
+            </div>
+
+        </div>
+        <div id="inventoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+            </ul>
+        </div>
+        <!--foreground items-->
+        <div id="key1" class="foreground"></div>
+        <div id="door1" class="foreground"></div>
+        <div id="door2" class="foreground"></div>
+        <div id="sign" class="foreground"></div>
+        <div id="statue1" class="foreground"></div>
+        <div id="house1" class="foreground"></div>
+        <div id="house2" class="foreground"></div>
+        <div id="thehouse" class="foreground"></div>
+        <div id="chest1" class="foreground"></div>
+        <div id="stfuDuke" class="heroCharacter"></div>
+        <div id="key2" class="foreground"></div>
+        <!--maincharacter-->
+        <div id="mainCharacter" class="heroCharacter">
+            <img src="assets/imgmine/fire_knight_1.gif" id="mcImage" draggable="false" alt="maincharacter puppet">
+        </div>
+        <!--background-->
+        <div id="tilemap" class="background">
+            <img src="assets/imgmine/map.png" draggable="false" alt="tilemap level 1">
+        </div>
+        <div id="house1img">
+            <img src="assets/imgmine/andere huisjes.png" alt="house1 with chest">
+        </div>
+        <div id="house1imgopen">
+            <img src="assets/imgmine/andere huisjes kist open.png" alt="house1 with chest">
+        </div>
+        <div id="thehouseimg">
+            <img src="assets/imgmine/you have won congrats.png" alt="you have won">
+        </div>
+    </div>
+    <audio id="mcAudio">
+        <source src="assets/audio/Gibberish - Sound Effect_01.mp3">
+    </audio>
+    <audio id="cAudio" src="assets/audio/high pitch voice.mp3"></audio>
+
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>

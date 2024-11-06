@@ -1,0 +1,214 @@
+body {
+    display: grid;
+    grid-template-columns: 18% 60% auto;
+    grid-template-rows: auto 80% auto;
+    gap: 20px;
+    margin: 0px;
+    background-color: #000000;
+}
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#navbar {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+    display: flex;
+
+}
+
+#Sintlucas {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    text-align: center;
+    margin: 30px auto auto 20%;
+
+}
+
+#Home {
+    margin: 10px auto auto auto;
+
+}
+
+#AboutMe {
+    margin: 10px auto;
+}
+
+#Skills {
+    margin: 10px auto;
+}
+
+#Projecten {
+    margin: 10px auto;
+}
+
+#Namenav {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    text-align: center;
+    display: flex;
+    margin: 20px 40px;
+}
+
+#Namenav a {
+    color: aliceblue;
+    font-size: 250%;
+    font-family: "Madimi One";
+    text-decoration: none;
+    list-style: none;
+}
+
+#navbar a {
+    color: aliceblue;
+    font-size: 250%;
+    font-family: "Madimi One";
+    text-decoration: none;
+    list-style: none;
+}
+
+#navbar :active {
+    color: aqua;
+}
+
+#navbar :hover {
+    color: aqua;
+}
+
+#Active a {
+    color: aqua;
+}
+
+.text {
+    margin: 15% auto auto auto;
+
+    color: aliceblue;
+    font-size: 600%;
+    font-family: "Madimi One";
+    text-align: center;
+}
+
+#nametext {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#mywebsite {
+    margin: top -20%
+}
+
+/* About me */
+
+#imgofme {
+    grid-column: 1;
+    grid-row: 2;
+    margin: auto 30px auto auto;
+    width: 300px;
+}
+
+#textaboutme {
+    /* float: right; */
+    margin: -400px auto auto 110%;
+    /* grid-column: 2; */
+    /* grid-row: 2; */
+    width: 80vw;
+    color: aliceblue;
+    font-size: 200%;
+    font-family: "Madimi One";
+    text-align: center
+}
+
+#tennis {
+    margin: 10px 30px auto 10px;
+}
+
+#djockovic {
+    margin: -20vh auto auto 400px;
+}
+
+#htmlfoto {
+    margin: -30vh auto auto 1300px;
+}
+
+.pic {
+    margin: -20vh auto auto 1100px;
+}
+
+#Skillslist {
+    margin-top: -150px;
+    margin-left: 50px;
+    grid-column: 1;
+    grid-row: 2;
+    color: aliceblue;
+    font-size: 200%;
+    font-family: "Madimi One";
+}
+
+#skillstext {
+    margin-top: -150px;
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 100px;
+    margin-bottom: 200px;
+}
+
+#skillstext h1 {
+    color: aliceblue;
+    font-size: 400%;
+    font-family: "Madimi One";
+}
+
+#skillstext p {
+    color: aliceblue;
+    font-size: 160%;
+    font-family: "Madimi One";
+}
+
+#joffevanderheijdentennis {
+    margin-left: 150px;
+    margin-top: -120px;
+}
+
+#projectstext {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#projectstext h1 {
+    color: aliceblue;
+    font-size: 400%;
+    font-family: "Madimi One";
+}
+
+#projectstext p {
+    color: aliceblue;
+    font-size: 160%;
+    font-family: "Madimi One";
+}
+
+#picgithub {
+    margin-left: 1050px;
+}
+
+#myfirsthtml {
+    margin-top: -200px;
+    margin-left: 1200px;
+}
+
+#webclickpic {
+    margin-top: -200px;
+    margin-left: 1000px;
+}
+
+#pongpic {
+    margin-top: -200px;
+    margin-left: 1000px;
+}
+
+.links {
+    text-decoration: none;
+    list-style: none;
+}

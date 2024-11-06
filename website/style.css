@@ -1,0 +1,602 @@
+:root {
+    --base-color: #efeaea;
+    --box-color: #fff;
+    --text-color: #000;
+    --active-color: #00A0C6;
+    --primary-color: #b6b6b6;
+    --button-color: #393939;
+}
+
+.darkMode {
+    --box-color: #393939;
+    --base-color: #000000;
+    --text-color: #ffffff;
+    --active-color: #00A0C6;
+    --primary-color: #676767;
+    --button-color: #ffffff;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    transition: ease 0.5s;
+    color: var(--active-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.activenav {
+    color: var(--active-color);
+}
+.sideBar {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+}
+.sideBar.active {
+    right: 0;
+}
+
+#navbar #menu-button {
+    display: none;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--base-color);
+    overflow: hidden;
+}
+
+#container {
+    transition: ease 1s;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 11vh 4fr;
+    grid-template-areas:
+    "header header header"
+    "main main main";
+    width: 100vw;
+}
+
+#navbar {
+    align-content: center;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    grid-area: header;
+    justify-content: center;
+    margin: 2vh 2vw 2vh 2vw;
+    max-height: 7vh;
+    max-width: 96vw;
+    min-height: 7vh;
+    min-width: 96vw;
+    transition: ease 1s;
+}
+
+#englishOrDutch {
+    transition: ease 1s;
+    font-size: 3vh;
+    color: var(--primary-color);
+    background-image: url("assets/flag/GB-flag.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.roundButton {
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: var(--base-color);
+    border: 0;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    align-self: center;
+    margin: 10px;
+    padding: 0;
+    transition: ease 1s;
+}
+
+#light-darkMode svg {
+    fill: var(--button-color);
+}
+
+#light-darkMode svg:last-child {
+    transition: ease 1s;
+    display: none;
+}
+
+.darkMode #light-darkMode svg:first-child {
+    transition: ease 1s;
+    display: none;
+}
+
+.darkMode #light-darkMode svg:last-child {
+    transition: ease 1s;
+    display: block;
+}
+
+#content {
+    transition: ease 1s;
+    display: grid;
+    grid-area: main;
+    background-color: var(--box-color);
+    overflow-x: auto;
+    margin: 2vh 2vw 2vh 2vw;
+    color: var(--text-color);
+    align-content: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#navOptions {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    transition: ease 1s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    font-size: 3vh;
+    color: var(--text-color);
+    font-weight: bold;
+    text-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+#navOptions li {
+    display: inline-flex; 
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+#navOptions ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#button {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/*homepage*/
+#selfTyping {
+    transition: ease 1s;
+    font-size: 6vh;
+    font-weight: bold;
+    padding: 2%;
+}
+
+/*aboutme*/
+#aboutMe {
+    transition: ease 1s;
+    width: 96vw;
+    height: 85vh;
+    display: grid;
+    grid-template-columns:4fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+    "text meimg"
+    "text joffe";
+    gap: 4%;
+    padding: 2%;
+
+}
+
+#aboutMeText {
+    grid-area: text;
+    transition: ease 1s;
+    padding: 1.5vh 1.5vw;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#aboutMeText h1 {
+    font-size: 8vh;
+}
+
+#aboutMeText p {
+    font-size: 4vh;
+}
+
+#joffeVanDerHeidenText {
+    background-color: black;
+    grid-area: joffe;
+    transition: ease-in-out 1s;
+    background-image: url("assets/tennis.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+#aboutMeImg {
+    grid-area: meimg;
+    transition: ease 1s;
+
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/me.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#forum {
+    background-color: var(--box-color);
+    width: 100%;
+    height: 100%;
+    grid-area: forum;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 5%;
+
+
+}
+
+#info {
+    background-color: var(--box-color);
+    width: 100%;
+    height: 100%;
+    grid-area: info;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 5%;
+    display: flex;
+    font-size: 1vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+input[type=text], [type=email], select, textarea {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+
+}
+
+#buttonforum {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buttonforum:hover {
+    background-color: #025939;
+}
+
+#contact {
+    background-image: url(assets/uden2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    transition: ease 1s;
+    display: grid;
+    grid-template-columns:3fr 1fr 3fr;
+    grid-template-rows: 3fr 4fr 3fr;
+    grid-template-areas:
+    "info . ."
+    "info . forum"
+    "info . .";
+    grid-area: main;
+    overflow-x: auto;
+    margin: 2vh 2vw 2vh 2vw;
+    color: var(--text-color);
+    align-content: center;
+    justify-content: center;
+    border-radius: 30px;
+
+}
+
+#projectTemplate{
+    grid-area: main;
+    transition: ease 1s;
+    display: grid;
+    grid-template-columns:1fr 3fr 2fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    grid-template-areas:
+    "title title picture"
+    "description description picture"
+    "back . try";
+    background-color: var(--box-color);
+    overflow-x: auto;
+    margin: 2vh 2vw 2vh 2vw;
+    color: var(--text-color);
+    align-content: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 3%;
+}
+#blank{
+    grid-area: blank;
+    width: 100%;
+    height: 100%;
+}
+#picture{
+
+    grid-area: picture;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+#picture-shine{
+    height: 150%;
+    background-image: url(assets/ShineWeb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+#picture\ expcalc{
+    height: 150%;
+    background-image: url(assets/WebsiteExpence.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+#picture\ webclick{
+    height: 150%;
+    background-image: url(assets/Point&Click.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}#picture-Ascii{
+    height: 150%;
+    background-image: url(assets/LucAscii.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+#projectTitle{
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+    grid-area: title;
+    font-size: 8vh;
+}
+#projectDescription{
+    grid-area: description;
+    width: 100%;
+    height: 100%;
+    font-size: 2.3vh;
+}
+#bttntry{
+
+    height: 100%;
+    grid-area: try;
+}
+.bttnlayoutp{
+    font-size: 200%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.bttnlayoutp:hover{
+    background-color: #025939;
+}
+#bttnback{
+    height: 50%;
+    grid-area: back;
+}
+@media(min-width: 801px) {
+    #menu-button {
+        display: none;
+    }
+}
+
+@media(max-width: 800px) {
+
+    #navbar .hideOnMobile {
+        display: none;
+    }
+
+    #navbar #menu-button {
+        display: block;
+        margin-right: 87%;
+    }
+
+}
+@media only screen and (max-width: 800px) {
+    #aboutMe {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "text"
+            "meimg"
+            "joffe";
+    }
+
+    #aboutMeText {
+        grid-area: text;
+        width: 100%;
+        height: auto;
+    }
+    #aboutMeText h1 {
+        font-size: 8vh;
+    }
+
+    #aboutMeText p {
+        font-size: 4vh;
+    }
+
+    #aboutMeImg {
+        grid-area: meimg;
+        width: 100%;
+        height: 60vh;
+        background-size: cover;
+    }
+
+    #joffeVanDerHeidenText {
+        grid-area: joffe;
+        width: 100%;
+        height: 30vh;
+        background-size: cover;
+        margin-bottom: 2%;
+    }
+    #contact{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 30% auto;
+        grid-template-areas:
+            "forum"
+            "."
+            "info"
+            ;
+    }
+    #forum {
+        width: 100%;
+        height: 100%;
+        grid-area: forum;
+
+    }
+
+    #info {
+        width: 100%;
+        height: 100%;
+        grid-area: info;
+        font-size: 60%;
+    }
+
+    #projectTemplate {
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #projectTitle {
+
+        opacity: 1;
+        width: 100%;
+        font-size: 400%;
+    }
+    #projectDescription {
+        font-size: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #bttntry {
+        height: 50%;
+        margin-bottom: 2%;
+    }
+    #bttnback {
+
+        height: 50%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #aboutMe {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "text"
+            "meimg"
+            "joffe";
+    }
+
+    #aboutMeText {
+        grid-area: text;
+        width: 100%;
+        height: auto;
+    }
+    #aboutMeText h1 {
+        font-size: 4vh;
+    }
+
+    #aboutMeText p {
+        font-size: 2vh;
+    }
+
+    #projectTitle{
+        margin-top: 30%;
+    }
+    #aboutMeImg {
+        grid-area: meimg;
+        width: 100%;
+        height: 30vh;
+        background-size: cover;
+    }
+
+    #joffeVanDerHeidenText {
+        grid-area: joffe;
+        width: 100%;
+        height: 10vh;
+        background-size: cover;
+        margin-bottom: 2%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .sideBar {
+        width: 100%;
+    }
+}

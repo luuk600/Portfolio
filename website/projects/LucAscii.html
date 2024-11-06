@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <title>Nick's Portfolio</title>
+  <link href="../style.css" rel="stylesheet">
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+  <div id="navbar">
+    <div class="anton-regular" id="navOptions">
+      <ul class="sideBar">
+        <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+          <path
+                  d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+        </svg></a></li>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../aboutMe.html">ABOUT ME</a></li>
+        <li><a href="../projects.html"  class="activenav">PROJECTS</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+      <ul>
+        <li class="hideOnMobile"><a href="../index.html" >HOME</a></li>
+        <li class="hideOnMobile"><a href="../aboutMe.html">ABOUT ME</a></li>
+        <li class="hideOnMobile"><a href="../projects.html" class="activenav">PROJECTS</a></li>
+        <li class="hideOnMobile"><a href="../contact.html">CONTACT</a></li>
+        <li id="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                                                                    viewBox="0 96 960 960" width="26">
+          <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+        </svg></a></li>
+      </ul>
+
+    </div>
+
+    <button aria-label="switch to dark mode" class="roundButton" id="light-darkMode">
+      <svg fill="#e8eaed" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+      </svg>
+      <svg fill="#e8eaed" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <div id="projectTemplate">
+    <div id="blank"></div>
+    <div class="anton-regular" id="projectTitle">Luc's Ascii tower</div>
+    <div id="projectDescription" class="anton-regular">
+      <p>This tower game was built by three people.</p>
+      <p>The first thing We did was talking about who does what and how we are going to achieve our goals.</p>
+      <p>My task was to do the third and fourth level which I've made within 6 hours.</p>
+      <p>The tower has six levels and a lot of hard to complete tasks which only teacher could do.</p>
+      <p>I made a part where the console gives you questions and the user needed to answer them.</p>
+      <p>The only problem with that was that almost nobody knew so much about computer's that they couldn't answer the questions.</p>
+      <p>The other thing I made was a chamber where luc's kid was, and his goal was to kill you in the most unique ways.</p>
+      <p>Like one time he drops a nuke and the console just shuts down.</p>
+      <p>After we were done we talked about the project and asked for feedback from teachers, and they were pretty positive.</p>
+    </div>
+    <div id="picture-Ascii"></div>
+    <a id="bttntry" target="_blank" href="https://github.com/luuk600/Luc-tower"><div >
+      <button class="bttnlayoutp" >Github</button>
+    </div></a>
+    <a  id="bttnback" href="../projects.html">
+      <div>
+        <button class="bttnlayoutp" >BACK</button>
+      </div>
+    </a>
+
+  </div>
+
+
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+/*projects*/
+#projects {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects div {
+    box-sizing: border-box;
+    min-width: 300px;
+    width: 300px;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+#styleProject {
+    max-width: 70vw;
+
+}
+
+
+.tryagain {
+    position: relative;
+    margin: 20px
+}
+
+.tryagain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+
+.tryagain:hover::before {
+    opacity: 0.5;
+}
+
+.projectText {
+    position: relative;
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.tryagain:hover .projectText {
+    opacity: 1;
+}
+
+.black {
+    background-color: black;
+    border-radius: 33px;
+}
+
+#first::before {
+    background-image: url("assets/ShineWeb.png");
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+#second::before {
+    background-image: url("assets/WebsiteExpence.png");
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+#third::before {
+    background-image: url("assets/Point&Click.png");
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+#fourth::before {
+    background-image: url("assets/LucAscii.png");
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+
+}
+
